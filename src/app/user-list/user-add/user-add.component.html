@@ -1,0 +1,41 @@
+
+<div class="container col-md-6 col-md-offset-3 w-25 p-2" id="form_container">
+    <h2 class="container">
+        Inscription:
+    </h2>
+    <p>
+        Remplisser vos cooordonnees
+    </p>
+    <button (click)="truePost()" class="btn btn-outline-success">afichee</button>
+    <form (ngSubmit)="createUser()" >
+    <div class="bg bg-info border border-info" *ngIf="trPost">
+        <span>
+            {{user.firstName}}
+        </span>
+        <p>bon test</p>
+    </div>
+    <div class="border border-info p-2 ">
+    <div >
+    <label for="firstname" class="form-label">Nom:</label>
+    <input type="text" class="form-control" id="firstname" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" placeholder="entrer votre nom" required>
+  </div>
+  <div >
+    <label for="lastname" class="form-label">Prenom:</label>
+    <input type="text" class="form-control" id="firstname" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" placeholder="Votre Prenom" required>
+  </div>
+  <div >
+    <label for="Age" class="form-label">Age:</label>
+    <input type="text" class="form-control" id="Age" [(ngModel)]="user.age" [ngModelOptions]="{standalone: true}" placeholder="en chifre">
+  </div>
+  <button class="btn btn-outline-info" type="submit">soumettre</button>
+</div>
+</form></div>
+
+
+
+
+
+
+
+
+   

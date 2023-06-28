@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-6">
+            <h2>Information sur l'utilisateur</h2>
+            <div class="container" *ngIf="user" >
+              <ul class="list-group">
+                  <li class="list-group-item">Id: {{user.id}}</li>
+                  <li class="list-group-item">Nom: {{user.firstName}}</li>
+                  <li class="list-group-item">Prenom: {{user.lastName}}</li>
+                  <li class="list-group-item">Age:{{user.age}} ans</li>
+                </ul>
+            </div>
+         </div>
+         <div class="col" *ngIf="user">
+            <h2>Entrer les Informations a modifier</h2>
+            <ul class="list-group">
+             <li class="list-group-item">Id: {{user.id}}</li>
+            </ul>
+            <input class="form-control" type="text" placeholder="nom" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" >
+            <input class="form-control" type="text" placeholder=" prenom" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" >
+            <input class="form-control" type="text" placeholder="age en chifre" [(ngModel)]="user.age" [ngModelOptions]="{standalone: true}" >
+            <button type="submit" (click)="updatUser()" class="btn btn-outline-info"> enregistrer les modification</button>
+        </div>
+    </div>
+</div>

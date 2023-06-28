@@ -1,0 +1,9 @@
+<h2>Information sur l'utilisateur</h2>
+<div class="container" *ngIf="user" >
+  <ul class="list-group">
+      <li class="list-group-item">Id: {{user.id}}</li>
+      <li class="list-group-item">Nom: {{user.firstName}}</li>
+      <li class="list-group-item">Prenom: {{user.lastName}}</li>
+      <li class="list-group-item">Age:{{user.age}} ans</li>
+    </ul>
+</div>
